@@ -45,7 +45,7 @@ const Ted = () => {
     }
 
     return (
-        <div className=' bg-red-300'>
+        <div className=' bg-red-300 min-h-[100vh]'>
             <div className='text-center font-bold text-xl'>TEDx Recommendation</div>
 
             <div className="search-box my-2 ml-2 flex justify-center">
