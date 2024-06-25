@@ -34,9 +34,28 @@ const Ted = () => {
         setItems(updateditem);
     }
 
+    const changeHandler=(event)=>{
+        let search=Data.filter((currElem)=>{
+            return( 
+                currElem.title.toLowerCase().replaceAll(' ','').includes(event.target.value.toLowerCase().replaceAll(' ','')) ||
+                currElem.speakers.toLowerCase().replaceAll(' ','').includes(event.target.value.toLowerCase().replaceAll(' ',''))
+            )
+        })
+        setItems(search)
+    }
+
     return (
         <>
             <div className='text-center font-bold text-xl'>TEDx Recommendation</div>
+
+            <div className="search-box my-2 ml-2 flex justify-center">
+                <input type="text"
+                placeholder='search'
+                className=' border border-black px-2 py-2 rounded-md text-xl' 
+                onChange={changeHandler}
+                />
+                
+            </div>
 
             <div className="navbar flex justify-evenly overflow-x-auto md:gap-4">
                 {catItems.map((currElem, index) => {
