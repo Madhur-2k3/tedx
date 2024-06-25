@@ -45,7 +45,7 @@ const Ted = () => {
     }
 
     return (
-        <>
+        <div className=' bg-red-300'>
             <div className='text-center font-bold text-xl'>TEDx Recommendation</div>
 
             <div className="search-box my-2 ml-2 flex justify-center">
@@ -60,7 +60,7 @@ const Ted = () => {
             <div className="navbar flex justify-evenly overflow-x-auto md:gap-4">
                 {catItems.map((currElem, index) => {
                     return <button
-                     className=' bg-slate-600 p-1 rounded-md md:p-2 '
+                     className=' bg-blue-200 p-1 rounded-md md:p-2 '
                      key={index} onClick={()=>filteritem(currElem)}>{currElem}</button>
                 })}
             </div>
@@ -68,7 +68,7 @@ const Ted = () => {
             <div className=" w-[80%] mx-auto ">
                 {
                     items.map((currElem)=>{
-                      return <a href={currElem.page_url}> <div className="card bg-slate-500 my-3 rounded-lg p-2">
+                      return <a href={currElem.page_url}> <div className="card bg-blue-200 my-3 rounded-lg p-2">
                                 <h1 className=' font-semibold'>{currElem.title}</h1>
                                 <p>{currElem.summary}</p>
                                 {/* <p>{currElem.published_date}</p> */}
@@ -81,7 +81,7 @@ const Ted = () => {
                     })
                 }
             </div>
-        </>
+        </div>
     );
 }
 
